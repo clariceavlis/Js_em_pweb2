@@ -8,7 +8,23 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script>
+        function limpa() {
+            if(document.getElementById('nome').value!="") {
+                document.getElementById('nome').value="";
+                document.getElementById('email').value="";
+                document.getElementById('senha').value="";
+                document.getElementById('conf').value="";
+                }
+            }
+                        
+        function enviardados(){
+            if(document.getElementById('nome').value =="" || document.getElementById('nome') < 3){
+                alert( "Preencha campo NOME corretamente!" );
+                document.dados.tx_nome.focus();
+                return false;
+            }
+    </script>
     <style>
         body{
             width: 100%;
@@ -44,35 +60,34 @@
             width: 60%;
             margin: 0 auto;
         }
-        button{
-            background-color: #798d97;
-            border-radius: 10px;
-        }
-    
-       
+        .bot{
+            display: inline-block;
+            width: 100%   
+        } 
     </style>
 
 </head>
 
 <body>
+    
     <div  id="area-cadastro" class="painel-form">
         <form>
           <header id="cabecalho-form"><h2>Cadastro</h2></header>
         <div style="width: 50%;margin-left: 25%">
           <h3 style="margin-left: 25%">Dados</h3>
           <label for="nome">Nome: </label>
-          <input style="width: 100%" name="nome"type="text" class="form-control"/>
+          <input style="width: 100%" name="nome"type="text" class="form-control" id="nome"/>
 
           E-mail:<br>
-                <input type="text" name="senha" >
+                <input type="text" name="senha" id="email">
                 <br>
 
             Senha:<br>
-            <input type="password" name="senha" >
+            <input type="password" name="senha" id="senha">
             <br>
 
             Confirme sua Senha:<br>
-            <input type="password" name="senha" >
+            <input type="password" name="senha" id="conf">
             <br>
             
             Módulo<br>
@@ -83,8 +98,10 @@
                 <option value="opel"> 3° </option> 
             </select>
             <br>
-            <button style="margin-left: 25%">Salvar</button>
-            <button>Limpar</button>
+            <div class="bot">
+            <input style="margin-left: 20%; background-color: #798d97; border-radius: 10px; display:inline-block; width:25%" type="button" value="Salvar" onClick="enviardados()">
+            <input style="background-color: #798d97; border-radius: 10px; display:inline-block; width:25%" type="button" value="Limpar" onClick="limpa()">
+            </div>
         </div>
         </form>
     </div>
