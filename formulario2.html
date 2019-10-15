@@ -8,23 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script>
-        function limpa() {
-            if(document.getElementById('nome').value!="") {
-                document.getElementById('nome').value="";
-                document.getElementById('email').value="";
-                document.getElementById('senha').value="";
-                document.getElementById('conf').value="";
-                }
-            }
-                        
-        function enviardados(){
-            if(document.getElementById('nome').value =="" || document.getElementById('nome') < 3){
-                alert( "Preencha campo NOME corretamente!" );
-                document.dados.tx_nome.focus();
-                return false;
-            }
-    </script>
+    
     <style>
         body{
             width: 100%;
@@ -69,6 +53,17 @@
 </head>
 
 <body>
+
+        <script>
+                function limpa() {
+                    if(document.getElementById('nome').value!="") {
+                        document.getElementById('nome').value="";
+                        document.getElementById('email').value="";
+                        document.getElementById('senha').value="";
+                        document.getElementById('conf').value="";
+                        }
+                    }
+        </script>
     
     <div  id="area-cadastro" class="painel-form">
         <form>

@@ -1,0 +1,100 @@
+<meta charset="UTF-8">
+
+<script>
+    //Emite uma mensagem de alerta na tela. Ex: Printf.
+    //alert("Podemos fazer mais com JavaScript!");  
+    
+    /*Exibe uma mensagem
+    document.write("Minha idade é: "); 
+    document.write(19); */
+
+    /*Declarando uma variável e adicionando o h1 ao texto.
+    var ano = 2019;
+    document.write("<h1> Eu nasci em: " + (ano - 20) + "<h1><br>");*/
+
+
+    //O Primeiro declara uma função e o segundo chama a função em javascript;
+    function mostra(frase) {
+      document.write(frase + "<br>");
+    };
+
+    //var ano = 2019;
+    //document.write("Eu nasci em: " + (ano - 20));*/
+
+
+    /*Exibe a mensagem no console do navegador.
+    document.write("Ola mundo!<br>");
+    document.write("Esse é meu segundo programa");
+    console.log("Esta mensagem aparece apenas no log");*/
+
+    
+    /* Mostra o IMC
+    var peso = 60;
+    var altura = 1.55;
+    var imc = peso/ (altura * altura);
+    mostra("meu imc é: " + Math.round(imc));*/
+
+    
+    /* Recebe mensagem do teclado e mostra as informações.
+    var nome = prompt ("Bom Dia! Qual é o seu nome?");
+    document.write("bem vindo(a), " + nome );
+
+    var idade = prompt(nome + ", quantos anos você tem?");
+    document.write( "<br>" + nome + " tem " + idade + " anos.");*/
+
+
+    /* 
+    var vitorias = prompt("Quantos jogos o CSA Futebol Clube venceu?");
+    var empates = prompt("Quantos jogos o CSA Futebol Clube empatou?");
+    var pontos = (parseInt(vitorias) * 3) + parseInt(empates);
+    if(pontos > 42){
+        mostra("O CSA Futebol Clube não será rebaixado!");
+    }
+    else{
+        mostra("Lamento informar. Mas acho que o CSA futebol clube seá rebaixado!");
+    }*/
+
+
+    /* Sorteia um numero até 100.
+    var numeroPensado = Math.round(Math.random() * 100);
+    var chute = prompt("Já pensei. Qual você acha que é?");
+    if(chute == numeroPensado){   
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    }else {
+        mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+    }*/
+
+
+
+    /* Estrutura de repetição  
+    var anoDeCopa = 1930;
+    while(anoDeCopa <= 2022){
+        document.write(anoDeCopa + " "  + "Tem copa <br>");
+        anoDeCopa = anoDeCopa + 4;
+    } */
+
+
+    /* multiplicador de numeros 
+    var numero = 7;
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador ++){
+        mostra(multiplicador * numero);
+
+    } */
+
+
+    for(var linha = 0; linha < 3; linha = linha +1){
+        for(var coluna = 0; coluna < 10; coluna = coluna + 1){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+
+
+
+
+
+
+
+</script>
