@@ -8,106 +8,155 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
     <style>
-        body{
+        body {
             width: 100%;
-            background-image: url("img/img_fundo.jpg");
+            background-color: #798d97;
             height: 100%;
             position: relative;
-            
+
         }
-        #cabecalho-form{
+
+        #cabecalho-form {
             background-color: #798d97;
             color: #ffffff;
             border: 1px solid;
             border-radius: 10px;
             text-align: center;
         }
-       
-        input, select{
+
+        input,
+        select {
             margin-bottom: 5px;
             margin-right: 5px;
             width: 100%;
         }
-        
-        div#area-cadastro{
-            margin-top: 10px; 
+
+        div#area-cadastro {
+            margin-top: 10px;
             background-color: #ffffff;
             width: 40%;
             padding: 10px;
         }
-        .painel-form{
+
+        .painel-form {
             border: 1px solid gray;
             border-radius: 5px;
             height: 60%;
             width: 60%;
             margin: 0 auto;
         }
-        .bot{
+
+        .bot {
             display: inline-block;
-            width: 100%   
-        } 
+            width: 100%
+        }
+        
+        
     </style>
 
 </head>
 
 <body>
 
-        <script>
-                function limpa() {
-                    if(document.getElementById('nome').value!="") {
-                        document.getElementById('nome').value="";
-                        document.getElementById('email').value="";
-                        document.getElementById('senha').value="";
-                        document.getElementById('conf').value="";
-                        }
-                    }
-        </script>
-    
-    <div  id="area-cadastro" class="painel-form">
-        <form>
-          <header id="cabecalho-form"><h2>Cadastro</h2></header>
-        <div style="width: 50%;margin-left: 25%">
-          <h3 style="margin-left: 25%">Dados</h3>
-          <label for="nome">Nome: </label>
-          <input style="width: 100%" name="nome"type="text" class="form-control" id="nome"/>
+    <script>
+        function limpa() {
+            if (document.getElementById('nome').value != "") {
+                document.getElementById('nome').value = "";
+                document.getElementById('email').value = "";
+                document.getElementById('senha').value = "";
+                document.getElementById('conf').value = "";
+            }
+        }
+        function salvar() {
+            if (form.nome.value == "") {
+                alert("Campo nome obrigatório");
 
-          E-mail:<br>
+                if (form.E - mail.value == "") {
+                    alert("campo e-mail obrigatório");
+                }
+
+            }
+
+        }    
+    </script>
+
+
+    <div id="area-cadastro" class="painel-form">
+        <form name="form" method="POST">
+            <header id="cabecalho-form">
+                <h2>Cadastro</h2>
+            </header>
+            <div style="width: 50%;margin-left: 25%">
+                <h3 style="margin-left: 25%">Dados</h3>
+                <label for="nome">Nome: </label>
+                <input style="width: 100%" name="nome" type="text" class="form-control" id="nome" />
+                E-mail:<br>
                 <input type="text" name="senha" id="email">
                 <br>
 
-            Senha:<br>
-            <input type="password" name="senha" id="senha">
-            <br>
+                Senha:<br>
+                <input type="password" name="senha" id="senha">
+                <br>
 
-            Confirme sua Senha:<br>
-            <input type="password" name="senha" id="conf">
-            <br>
-            
-            Módulo<br>
+                Confirme sua Senha:<br>
+                <input type="password" name="senha" id="conf">
+                <br>
 
-            <select>
-                <option value="volvo"> 1° </option>
-                <option value="saab"> 2°</option>
-                <option value="opel"> 3° </option> 
-            </select>
-            <br>
-            <div class="bot">
-            <input style="margin-left: 20%; background-color: #798d97; border-radius: 10px; display:inline-block; width:25%" type="button" value="Salvar" onClick="enviardados()">
-            <input style="background-color: #798d97; border-radius: 10px; display:inline-block; width:25%" type="button" value="Limpar" onClick="limpa()">
+                Módulo<br>
+
+                <select>
+                    <option value="volvo"> 1° </option>
+                    <option value="saab"> 2°</option>
+                    <option value="opel"> 3° </option>
+                </select>
+
+
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-sm-2">Preferências: </div> 
+                    
+                    <div  class="col-sm-10"><br> <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1"> P.O.O </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1"> Java Script </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1"> Pweb 2 </label>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+                <br>
+                <div class="bot">
+                    <input
+                        style="margin-left: 20%; background-color: #798d97; border-radius: 10px; display:inline-block; width:25%"
+                        type="button" value="Salvar" onClick="salvar()">
+                    <input style="background-color: #798d97; border-radius: 10px; display:inline-block; width:25%"
+                        type="button" value="Limpar" onClick="limpa()">
+                </div>
+            </div>
         </form>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
